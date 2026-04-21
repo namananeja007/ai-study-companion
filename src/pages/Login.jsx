@@ -40,7 +40,18 @@ const Login = () => {
       await signInWithPopup(auth, googleProvider);
       navigate('/');
     } catch (err) {
-      setError('Google sign-in failed. Please try again.');
+      console.error("Google Sign-In Error:", err);
+      if (err.code === 'auth/operation-not-allowed') {
+        setError('Google sign-in is not enabled in Firebase Console.');
+      } else if (err.code === 'auth/popup-blocked') {
+        setError('Sign-in popup was blocked by your browser.');
+      } else if (err.code === 'auth/popup-closed-by-user') {
+        setError('Sign-in window was closed before completion.');
+      } else if (err.code === 'auth/unauthorized-domain') {
+        setError('This domain is not authorized in Firebase Console.');
+      } else {
+        setError(`Google sign-in failed: ${err.message}`);
+      }
     } finally {
       setLoading(false);
     }
