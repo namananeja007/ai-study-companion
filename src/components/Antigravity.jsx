@@ -4,21 +4,21 @@ import { useMemo, useRef } from 'react';
 import * as THREE from 'three';
 
 const AntigravityInner = ({
-  count = 300,
-  magnetRadius = 10,
-  ringRadius = 10,
-  waveSpeed = 0.4,
-  waveAmplitude = 1,
-  particleSize = 2,
-  lerpSpeed = 0.1,
-  color = '#FF9FFC',
-  autoAnimate = false,
-  particleVariance = 1,
-  rotationSpeed = 0,
-  depthFactor = 1,
-  pulseSpeed = 3,
-  particleShape = 'capsule',
-  fieldStrength = 10
+  count = 400,
+  magnetRadius = 12,
+  ringRadius = 12,
+  waveSpeed = 0.5,
+  waveAmplitude = 1.5,
+  particleSize = 0.4,
+  lerpSpeed = 0.05,
+  color = '#818cf8',
+  autoAnimate = true,
+  particleVariance = 0.5,
+  rotationSpeed = 0.1,
+  depthFactor = 1.5,
+  pulseSpeed = 2,
+  particleShape = 'sphere',
+  fieldStrength = 8
 }) => {
   const meshRef = useRef(null);
   const { viewport } = useThree();

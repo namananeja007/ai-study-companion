@@ -45,23 +45,6 @@ const Signup = () => {
           activeColor="#a78bfa" 
           proximity={150}
         />
-        <Antigravity
-          count={860}
-          magnetRadius={25}
-          ringRadius={15}
-          waveSpeed={1.2}
-          waveAmplitude={3.5}
-          particleSize={2}
-          lerpSpeed={0.1}
-          color="#FF9FFC"
-          autoAnimate={true}
-          particleVariance={1}
-          rotationSpeed={0.5}
-          depthFactor={1.8}
-          pulseSpeed={4}
-          particleShape="capsule"
-          fieldStrength={10}
-        />
         {/* Subtle spotlight overlay */}
         <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_50%_50%,rgba(99,102,241,0.05)_0%,transparent_70%)]" />
       </div>

@@ -43,6 +43,7 @@ const Login = () => {
           activeColor="#6366f1" 
           proximity={100}
         />
+        
         {/* Subtle spotlight overlay */}
         <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_50%_50%,rgba(99,102,241,0.05)_0%,transparent_70%)]" />
       </div>
